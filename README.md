@@ -7,7 +7,7 @@ SimpleHTML - PHP библиотека для генерации HTML-кода. �
 Пример кода:
 
 
-<code>
+```php
 <?php
 
 require_once('./SimpleHTML/builder.php');
@@ -77,5 +77,5 @@ $page->closeTag('html');
 $page->display();
 
 ?>
-</code>
+```
 
