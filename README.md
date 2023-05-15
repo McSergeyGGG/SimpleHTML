@@ -12,70 +12,35 @@ SimpleHTML - PHP библиотека для генерации HTML-кода. �
 
 require_once('./SimpleHTML/builder.php');
 
-
-
 $page = new HtmlBuilder();
 
-
-
 $page->style('body', ['background' => '#056']);
-
 $page->openTag('html');
 
-
-
 // Head section
-
 $page->openTag('head');
-
 $page->tag('title', 'My Page');
-
 $page->closeTag('head');
 
-
-
 // Body section
-
 $page->openTag('body', ['style' => 'color: white;']);
-
-
-
 $page->tag('h1', 'Добро пожаловать на мою страницу!');
-
-
-
 $page->image('chips.png', 'chips', ['width' => '300px']);
 
-
-
 $page->tag('h2', 'Моя любимая еда:');
-
 $page->listUl(['Чипсы', 'Энергетики', 'Дошираки']);
 
-
-
 $headers = ['Имя', 'Возраст', 'Профессия'];
-
 $rows = [
-
     ['Сергей', 18, 'Разработчик'],
-
     ['Вячеслав', 25, 'Помощник']
-
 ];
-
 $page->table($headers, $rows);
 
-
-
 $page->closeTag('body');
-
 $page->closeTag('html');
 
-
-
 $page->display();
-
 ?>
 ```
 
